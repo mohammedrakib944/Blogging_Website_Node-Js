@@ -1,0 +1,53 @@
+<%- include('./include/_header.ejs') %>
+  <!-- landing section -->
+  <div class="landing-section">
+    <h2 style="font-size: 6.5rem; letter-spacing: 2px; font-family: 'Ephesis', cursive;">Welcome to Md.Rakib's blog</h2>
+    <P style="color: #ddd; letter-spacing: 1px;">Stay with me for updated teach news</P>
+  </div>
+  <!-- landing section -->
+  <div class="container">
+
+    <h2 class="all-post">ALL POSTS</h2>
+    <% article.forEach(data=> { %>
+      <div class="custom-card">
+        <div class="card-img">
+          <a href="#"><img src="/uploads/<%= data.image %>" alt="" /></a>
+        </div>
+
+        <div class="right-card">
+          <div class="custom-card-title">
+            <h3>
+              <%= data.title %>
+            </h3>
+            <div class="action-links">
+              <div class="edit">
+                <a href="articles/edit/<%= data.id %>"><i class="fas fa-edit"></i> Edit</a>
+              </div>
+              <form action="/articles/<%= data.id%>?_method=DELETE" method="POST">
+                <div class="delete">
+                  <button type="submit" class="delete-button"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="date">
+            <p class="card-date">
+              <%= data.date.toLocaleDateString() %>
+            </p>
+          </div>
+          <div class="paragraph">
+            <p>
+              <%= data.description %>
+            </p>
+          </div>
+          <a href="articles/<%= data.slug %>"" class=" custom-btn">Read more</a>
+        </div>
+      </div>
+      <% }) %>
+  </div>
+  <!-- app js link -->
+  <script src="js/app.js"></script>
+  </body>
+
+  </html>
+

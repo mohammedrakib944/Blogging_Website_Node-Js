@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&family=Sofia&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+/*
+font-family: 'Roboto', sans-serif;
+font-family: 'Sofia', cursive;
+*/
+:root {
+  --primary-color: #262626;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+  font-family: "Roboto", sans-serif;
+}
+/* nav section */
+.nav-section {
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
+}
+.under-nav {
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 3fr 6fr 3fr;
+}
+.logo {
+  width: 100%;
+}
+.logo h2 {
+  font-family: "Sofia", cursive;
+  font-size: 28px;
+  font-weight: 600;
+  margin-top: 17px;
+}
+/* cover page section */
+.landing-section {
+  width: 100%;
+  height: 420px;
+  background: url(/img/cover.jpg)center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.pages {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pages ul {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.pages ul li {
+  list-style: none;
+  margin: 0px 10px;
+  list-style: none;
+}
+.pages ul li a {
+  color: rgb(34, 34, 34);
+}
+.new-post {
+  width: 100%;
+  padding-top: 13px;
+}
+.new-post-btn {
+  float: right;
+}
+.custom-btn {
+  padding: 5px 20px;
+  /* border: 1px solid rgb(187, 187, 187); */
+  border-radius: 5px;
+  /* box-shadow: 0px 5px 7px #ddd; */
+  color: white;
+  background: linear-gradient(23deg, #f44336, #714ea9);
+}
+.custom-btn:hover {
+  color: rgb(221, 221, 221);
+  box-shadow: 0px 0px 5px #ddd;
+  text-decoration: none;
+}
+
+/* all posts section */
+.all-post {
+  color: var(--primary-color);
+  font-size: 23px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 10;
+}
+.all-post::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: rgb(122, 122, 122);
+  margin-top: 10px;
+  margin-left: 10px;
+  z-index: 2;
+}
+.custom-card {
+  background: white;
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.custom-card:hover{
+  box-shadow: 0px 5px 30px #dad5d5;
+}
+.card-img {
+  width: 100%;
+  padding: 0px 20px 0px 0px;
+  overflow: hidden;
+}
+.card-img img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.custom-card-title{
+  display: grid;
+  grid-template-columns: 9fr 3fr;
+}
+
+.single-custom-title {
+  margin-top: 30px;
+  border-top: 2px solid #ddd;
+}
+
+.action-links {
+  margin: 20px 0px 10px 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.edit,
+.delete {
+  padding: 5px;
+}
+.edit a {
+  color: #0089cb;
+}
+.delete a {
+  color: #ec1c06;
+}
+button.delete-button {
+  border: none;
+  background: none;
+  color: #f44336;
+}
+.date p {
+  color: rgb(160, 160, 160);
+}
+.paragraph p {
+  padding-right: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,39 @@
+<%- include('./include/_header.ejs') %>
+  <div class="container">
+    <img src="/uploads/<%= article.image %>" alt="" class="article-image" />
+    <div class="single-article">
+      <a href="/" class="all-articles-btn">
+        <i class="fas fa-long-arrow-alt-left"></i> All Articles
+      </a>
+      <div class="custom-card-title single-custom-title">
+        <h3 class="article-title">
+          <%= article.title %>
+        </h3>
+        <div class="action-links">
+          <div class="edit">
+            <a href="edit/<%= article.id %>"> <i class="fas fa-edit"></i> Edit </a>
+          </div>
+          <form action="/articles/<%= article.id%>?_method=DELETE" method="POST">
+            <div class="delete">
+              <button type="submit" class="delete-button">
+                <i class="fas fa-trash"></i> Delete
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <p class="date">
+        <%= article.date.toLocaleDateString() %>
+      </p>
+
+      <p class="article-body">
+        <%- article.convertToHtml %>
+      </p>
+    </div>
+
+  </div>
+  <!-- app js link -->
+  <script src="js/app.js"></script>
+  </body>
+
+  </html>
