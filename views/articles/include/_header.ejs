@@ -1,3 +1,5 @@
+<%- include('./_loginReg.ejs') %>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,6 +18,7 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/login.css">
   <link rel="stylesheet" href="/css/create-single.css" />
   <title>rakib</title>
 </head>
@@ -23,7 +26,8 @@
 <body>
   <!-- navigation section -->
   <nav class="nav-section">
-    <div class="container">
+    <div id="contain"  class="container">
+
       <div class="col-lg-8 col-sm-8 under-nav">
         <div class="logo">
           <h2>md. rakib</h2>
@@ -36,8 +40,11 @@
           </ul>
         </div>
         <div class="new-post">
-          <a href="/articles/new" class="new-post-btn custom-btn">
+          <!-- <a href="/articles/new" class="new-post-btn custom-btn" onclick="showLogin()">
             Create New
+          </a> -->
+          <a href="#" class="new-post-btn custom-btn" onclick="showLogin()">
+            Create New Article
           </a>
         </div>
       </div>

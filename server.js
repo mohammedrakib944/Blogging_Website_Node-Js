@@ -7,6 +7,8 @@ const methodOverride = require("method-override");
 
 const app = express();
 
+console.log("THis is some change");
+
 // connect to database
 mongoose.connect("mongodb://localhost/myBlog", {
   useNewUrlParser: true,

@@ -1,0 +1,81 @@
+button.closeLogin,
+.closeReg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  width: 25px;
+  height: 25px;
+  border: 1px solid;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+::placeholder {
+  color: rgb(207, 207, 207);
+  opacity: 1;
+}
+input.inputField {
+  width: 98%;
+  padding: 10px 0px;
+  margin: 5px 0;
+  background: none;
+  color: white;
+  border: none;
+  border-bottom: 2px solid;
+}
+input.inputField:focus {
+  outline: none;
+}
+
+.login,
+.Registration {
+  /*display: block; */
+  display: none;
+  position: absolute;
+  width: 500px;
+  padding: 40px;
+  background: linear-gradient(45deg, #283d58, #ac5867);
+  border-radius: 10px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
+  z-index: 10;
+  box-shadow: 0px 10px 30px #0000008a;
+}
+.login h2,
+.Registration h2 {
+    color: white;
+    font-size: 26px;
+}
+button.loginButton {
+  margin-top: 15px;
+  padding: 5px 8px;
+  border-radius: 4px;
+  border: 1px solid;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.showLogin {
+  display: block;
+}
+
+.showReg {
+  display: block;
+}
+a.loginButton {
+    text-decoration: none;
+    color: #fafafa;
+    font-size: 15px;
+    margin: 20px 11px 0 0;
+    display: inline-block;
+    background: #6c4c63;
+    padding: 5px 17px;
+    border-radius: 5px;
+}
